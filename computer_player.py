@@ -13,7 +13,7 @@ if __name__ == '__main__':
     max= MAX
     guess_nachine= GuessMachine()
     while True:
-        attempt=random.randint(MIN,MAX)
+        attempt=int((min+max)/2)
         result=guess_nachine.guess(attempt)
         print('tried %d : %s' % (attempt, result))
         if result=='found':
@@ -23,4 +23,3 @@ if __name__ == '__main__':
             min=attempt+1
         else:
             max=attempt-1
-            
